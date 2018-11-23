@@ -28,11 +28,11 @@
 
             <nav class="navigation__nav">
                 <ul class="navigation__list">
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About  Troikans</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benfits</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Events</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                    <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Contact now</a></li>
+                    <li class="navigation__item" onclick="unCheck()"><a href="#about" class="navigation__link"><span>01</span>About  Troikans</a></li>
+                    <li class="navigation__item" onclick="unCheck()"><a href="#benefits" class="navigation__link"><span>02</span>Your benfits</a></li>
+                    <li class="navigation__item" onclick="unCheck()"><a href="#study" class="navigation__link"><span>03</span>Study material</a></li>
+                   
+                    <li class="navigation__item" onclick="unCheck()"><a href="#footer" class="navigation__link"><span>04</span>Contact now</a></li>
                     </ul>
             </nav>
         </div>
@@ -53,7 +53,7 @@
         </header>
 
         <main>
-            <section class="section-about">
+            <section id="about" class="section-about">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary"  data-aos="fade">
                         Why To Join Us
@@ -100,7 +100,7 @@
                 </div>
             </section>
 
-            <section class="section-features" >
+            <section class="section-features" id="benefits">
                 
                 <div class="row">
                     <div class="col-1-of-4" data-aos="flip-up">
@@ -146,7 +146,7 @@
                 </div>
             </section>
 
-            <section class="section-tours" id="section-tours">
+            <section class="section-tours" id="study">
                 <div class="u-center-text u-margin-bottom-big">
                     <h2 class="heading-secondary" data-aos="flip">
                         STUDY MATERIAL
@@ -458,7 +458,7 @@
             </section> -->
         </main>
 
-        <footer class="footer" data-aos="fade-up">
+        <footer id="footer" class="footer" data-aos="fade-up">
             <div class="footer__logo-box">
 
                 <picture class="footer__logo">
@@ -519,6 +519,6 @@
   <script>
     AOS.init();
   </script>
-
+        <script src="./js/main.js"></script>
     </body>
 </html>
