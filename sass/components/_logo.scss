@@ -1,0 +1,12 @@
+.logo{
+    width: 10rem;
+    height: 10rem;
+    position: absolute;
+    top:5rem;
+    left: 5rem;
+    z-index: 999;
+    @include respond(tab-port) {
+        top:3rem;
+    left: 3rem;
+    }
+}

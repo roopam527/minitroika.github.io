@@ -1,0 +1,124 @@
+.navigation{
+    
+    position: absolute;
+    top:0;
+    left:0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 99;
+    background: rgba($color-black,.1);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: $color-white;
+    font-size: 3rem;
+    line-height: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    &__link{
+        animation: flipInY 0.9s;
+        animation-delay: .5s;
+        animation-fill-mode: backwards;
+        margin-top: 1rem;
+        padding: 0.5rem 1rem;
+        text-align: center;
+        background-color:$color-white;
+        display: block;
+        color: $color-black;
+    font-family: 'Major Mono Display', monospace;        
+        transform: skew(0rem);
+        transition: all .2s;
+        cursor: pointer;
+        &:hover{
+            transform: perspective(1000px) translateY(-0.5rem);
+        }
+    }
+    &__btn{
+    
+        position: relative;
+        z-index: 100000;
+       
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        z-index: 2000;
+        box-shadow: 0 1rem 3rem rgba($color-black, .1);
+        text-align: center;
+        cursor: pointer;
+
+        @include respond(tab-port) {
+            top: 4rem;
+            right: 4rem;
+        }
+
+        @include respond(phone) {
+            top: 3rem;
+            right: 3rem;
+        }
+    }
+
+
+    &__icon {
+        position: relative;
+        margin-top: 3.5rem;
+
+        &,
+        &::before,
+        &::after {
+            width: 3rem;
+            height: 2px;
+            background-color: $color-white;
+            display: inline-block;
+        }
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            transition: all .2s;
+        }
+
+        &::before { top: -.8rem; }
+        &::after { top: .8rem; }
+    }
+
+    &__btn:hover &__icon::before {
+        top: -1rem;
+    }
+
+    &__btn:hover &__icon::after {
+        top: 1rem;
+    }
+
+    &__checkbox:checked + &__btn &__icon {
+        background-color: transparent;
+    }
+
+    &__checkbox:checked + &__btn &__icon::before {
+        top: 0;
+        transform: rotate(135deg);
+    }
+
+    &__checkbox:checked + &__btn &__icon::after {
+        top: 0;
+        transform: rotate(-135deg);
+    }
+
+    
+}
+
+#navigation__checkbox{
+    display: none;
+}
+
+#navigation__checkbox:checked ~ .navigation{
+    display: flex;
+}
+
+#navigation__checkbox:checked{
+    padding: 50rem;
+}
