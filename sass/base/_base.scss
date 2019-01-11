@@ -3,7 +3,7 @@
 *::before {
     margin: 0;
     padding: 0;
-    box-sizing: inherit;
+    box-sizing: border-box;
 }
 
 html {
@@ -11,7 +11,7 @@ html {
     font-size: 62.5%; //1 rem = 10px; 10px/16px = 62.5%
 
     @include respond(tab-land) { // width < 1200?
-        font-size: 56.25%; //1 rem = 9px, 9/16 = 50%
+        font-size: 56.25%; //1 rem = 9px, 9/16 
     }
 
     @include respond(tab-port) { // width < 900?
@@ -25,16 +25,40 @@ html {
 
 body {
     box-sizing: border-box;
-    padding: 3rem;
+    padding: 0rem;
     overflow-x: hidden;
     width: 100vw;
-    
-    @include respond(tab-port) {
-        padding: 0;
-    }
+   
+   
 }
 
 ::selection {
-    background-color: $color-primary;
+    background-color: $color-white;
     color: $color-white;
+
 }
+
+.large-header {
+    position: relative;
+    width: 100vw;
+    height: 100vh !important;
+    //overflow: hidden;
+	background: #333;
+	background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    height: -webkit-fill-available;
+    &, & > .section-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+    
+    background-image: url('https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/img/demo-1-bg.jpg');
+}
+#demo-canvas{
+    position: absolute;
+    top:0;
+    width:100vw;
+    }

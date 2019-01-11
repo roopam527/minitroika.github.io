@@ -1,534 +1,404 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-131095655-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-131095655-1');
-</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Major+Mono+Display" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/css/demo.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Document</title>
 
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Spicy+Rice" rel="stylesheet">
+</head>
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+<body>
 
-        <!--<link rel="stylesheet" href="css/icon-font.css">-->
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="shortcut icon" type="image/png" href="img/logo-green-1x.png">
-        
-        <title>MINI TROIKA | Theory , Approach and Practice</title>
-    </head>
+  <input type="checkbox" id="navigation__checkbox" class="navigation__checkbox" />
+  <label for="navigation__checkbox" class="navigation__btn"><span class="navigation__icon"></span></label>
+  <div class="navigation">
+    <ul>
+      <li class="navigation__link" id="btn-about" >About Us</li>
+      <li class="navigation__link" id="btn-events" >Events</li>
+      <li class="navigation__link" id="btn-study" >Study Material</li>
+      <li class="navigation__link" id="btn-team" >Our Team</li>
+    </ul>
+  </div>
+  <div id="large-header" class="large-header">
 
-    <body>
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+    <canvas id="demo-canvas"></canvas>
+    <img class="logo" id="btn-header"  src="img/LAST LOGO WHITE.svg">
+    <section id="section-header" class="section-header">
+      <h1 class="heading-primary--main ">MINI TROIKA</h1>
+      <h2 class="heading-primary--sub ">A TECHNICAL CLUB</h2>
+      <button class="btn btn-white margin--sm">Get Registered</button>
+    </section>
 
-            <label for="navi-toggle" class="navigation__button">
-                <span class="navigation__icon">&nbsp;</span>
-            </label>
+    <!-- ABOUT US-->
+    <section id="section-about" class="section-about">
+      <h3 class="heading-tertiary margin--sm">You're going to fall in love with The Team</h3>
 
-            <div class="navigation__background">&nbsp;</div>
+      <p class="paragraph">
 
-            <nav class="navigation__nav">
-                <ul class="navigation__list">
-                    <li class="navigation__item" onclick="unCheck()"><a href="#about" class="navigation__link"><span>01</span>About  Troikans</a></li>
-                    <li class="navigation__item" onclick="unCheck()"><a href="#benefits" class="navigation__link"><span>02</span>Your benfits</a></li>
-                    <li class="navigation__item" onclick="unCheck()"><a href="#study" class="navigation__link"><span>03</span>Study material</a></li>
-                   
-                    <li class="navigation__item" onclick="unCheck()"><a href="#footer" class="navigation__link"><span>04</span>Contact now</a></li>
-                    </ul>
-            </nav>
+        We Give Students an opportunity to show their skills to the world by helping them build their dream project
+
+      </p>
+
+
+
+      <h3 class="heading-tertiary margin--sm">Anyone Can Register</h3>
+
+      <p class="paragraph">
+
+        In our Team we have Insanely Skilled members from each major
+
+        branch of Engineering So that anybody can reach us and get solution for
+
+        their problems, Technical Issues and So as to Collaborate on Innovative and Extraordinary Projects.
+
+      </p>
+
+      <a  class="btn btn-team">Our Team</a>
+
+    </section>
+
+    <!--Section Events-->
+    <section id="section-events" class="section-events blog-slider">
+      <div class="blog-slider__wrp swiper-wrapper">
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img" style="background:url(./img/download.png) center/cover">
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">23 Jan 2019</span>
+            <div class="blog-slider__title">Workshop On Action On Google</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+              voluptate repellendus magni illo ea animi? </div>
+            <a href="#" class="blog-slider__button">READ MORE</a>
+          </div>
+        </div>
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img" style="background:url(./img/sih.jpg) center/cover">
+           
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">till 20 Jan 2019</span>
+            <div class="blog-slider__title">SMART INDIA HACKATHON</div>
+            <div class="blog-slider__text">It is a national level technical event conducted by the govt of India. This
+              event is a another push to digital India initiative.</div>
+            <a href="#" class="blog-slider__button">READ MORE</a>
+          </div>
         </div>
 
-        <header class="header">
-            <div class="header__logo-box">
-                <img src="img/logo-white.png" alt="Logo" class="header__logo">
-            </div>
-
-            <div class="header__text-box">
-                <h1 class="heading-primary">
-                    <span class="heading-primary--main">MINI TROIKA</span>
-                    <span class="heading-primary--sub">theory , approach and practice</span>
-                </h1>
-
-                <a href="#section-tours" class="btn btn--white btn--animated">Be A Part Of Us</a>
-            </div>
-        </header>
-
-        <main>
-            <section id="about" class="section-about">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary"  data-aos="fade">
-                        Why To Join Us
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-1-of-2"  data-aos="fade-up">
-                        <h3 class="heading-tertiary u-margin-bottom-small">You're going to fall in love with nature</h3>
-                        <p class="paragraph">
-                            We Give Students an opportunity to show there skills to the world by helping them in creation of there dream project
-                        </p>
-
-                        <h3 class="heading-tertiary u-margin-bottom-small">We Are Open for Every One</h3>
-                        <p class="paragraph">
-                            In our Team we have Skilled members from each major branch of Engineering So that anybody can reach us and get solution for ther problems
-                        </p>
-
-                        <a href="./gallery.html" class="btn ">Our Gallery &rarr;</a>
-                    </div>
-                    <div class="col-1-of-2"  data-aos="fade-up">
-                        <div class="composition">
-
-                            <img src="img/nat-1.jpg"
-                                 alt="Photo 1"
-                                 
-                                 class="composition__photo composition__photo--p1">
-
-                            <img src="img/nat-2.png"
-                                 alt="Photo 2"
-                                 class="composition__photo composition__photo--p2">
-
-                            <img src="img/nat-3.png"
-                                 alt="Photo 3"
-                                 class="composition__photo composition__photo--p3">
-
-                            <!--
-                            <img src="img/nat-1-large.jpg" alt="Photo 1" class="composition__photo composition__photo--p1">
-                            <img src="img/nat-2-large.jpg" alt="Photo 2" class="composition__photo composition__photo--p2">
-                            <img src="img/nat-3-large.jpg" alt="Photo 3" class="composition__photo composition__photo--p3">
-                            -->
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-features" id="benefits">
-                
-                <div class="row">
-                    <div class="col-1-of-4" data-aos="flip-up">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-world"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Explore the world</h3>
-                            <p class="feature-box__text">
-                                We Are Also Send Students Project to many competitions so that they can reach out to the
-                                 world .
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4" data-aos="flip-up">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-compass"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Early birds</h3>
-                            <p class="feature-box__text">
-                                We encourage students to make more and more projects before starting there major project
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4" data-aos="flip-up">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-map"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">Bigger Vision</h3>
-                             <p class="feature-box__text">
-                                All the members of our team have an only moto to make earth more relaible place to live
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class="col-1-of-4" data-aos="flip-up">
-                        <div class="feature-box">
-                            <i class="feature-box__icon icon-basic-heart"></i>
-                            <h3 class="heading-tertiary u-margin-bottom-small">BE your entrepreneur</h3>
-                            <p class="feature-box__text">
-                                Work on yourself to make peoples work for you to live the life you dream
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="section-tours" id="study">
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary" data-aos="flip">
-                        STUDY MATERIAL
-                    </h2>
-                </div>
-
-                <div class="row">
-                    <div class="col-1-of-3" data-aos="fade-up">
-                       <div class="card">
-                           <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--1">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--1">Computer Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                            <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-                           </div>
-                           <div class="card__side card__side--back card__side--back-1">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">For</p>
-                                        <p class="card__price-value">CSE</p>
-                                    </div>
-                                    <a target="_blank" href="./study/computer.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                       </div>
-                    </div>
-
-
-                    <div class="col-1-of-3" data-aos="fade-up">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--2">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--2">Electrical Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-2">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">For</p>
-                                        <p class="card__price-value">EE</p>
-                                    </div>
-                                    <a target="_blank" href="./study/ee.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
-                    <div class="col-1-of-3" data-aos="fade-up">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--3">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--3">Mechanical Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-3">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">For</p>
-                                        <p class="card__price-value">ME</p>
-                                    </div>
-                                    <a target="_blank" href="./study/mechanical.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-1-of-3" data-aos="fade-up">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--4">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--4">Electronics & communication Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-4">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">for</p>
-                                        <p class="card__price-value">ECE</p>
-                                    </div>
-                                    <a target="_blank" href="./study/ece.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3" data-aos="fade-up">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--5">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--5">Polymer Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-5">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">For</p>
-                                        <p class="card__price-value">PE</p>
-                                    </div>
-                                    <a target="_blank" href="./study/polymer.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-1-of-3" data-aos="fade-up">
-                        <div class="card">
-                            <div class="card__side card__side--front">
-                                <div class="card__picture card__picture--6">
-                                    &nbsp;
-                                </div>
-                                <h4 class="card__heading">
-                                    <span class="card__heading-span card__heading-span--6">Chemical Engineering</span>
-                                </h4>
-                                <div class="card__details">
-                                    <ul>
-                                        <li></li>
-                                        <li>Old Exam Papers</li>
-                                        <li>Syllabus</li>
-                                        
-                                        <li>Difficulty: easy</li>
-                                        <li></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            <div class="card__side card__side--back card__side--back-6">
-                                <div class="card__cta">
-                                    <div class="card__price-box">
-                                        <p class="card__price-only">For</p>
-                                        <p class="card__price-value">CE</p>
-                                    </div>
-                                    <a target="_blank" href="./study/chemical.html" class="btn btn--white">Open now!</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-               
-            </section>
-<!-- 
-            <section class="section-stories" data-aos="fade-up">
-                <div class="bg-video">
-                    <video class="bg-video__content" autoplay muted loop>
-                        <source src="img/video.mp4" type="video/mp4">
-                        <source src="img/video.webm" type="video/webm">
-                        Your browser is not supported!
-                    </video>
-                </div>
-
-                <div class="u-center-text u-margin-bottom-big">
-                    <h2 class="heading-secondary" data-aos="fade">
-                        We make people genuinely happy
-                    </h2>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Mary Smith</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">I had the best week ever with my family</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="row" data-aos="fade-up">
-                    <div class="story">
-                        <figure class="story__shape">
-                            <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
-                            <figcaption class="story__caption">Jack Wilson</figcaption>
-                        </figure>
-                        <div class="story__text">
-                            <h3 class="heading-tertiary u-margin-bottom-small">WOW! My life is completely different now</h3>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, ipsum sapiente aspernatur libero repellat quis consequatur
-                                ducimus quam nisi exercitationem omnis earum qui. Aperiam, ipsum sapiente aspernatur libero
-                                repellat quis consequatur ducimus quam nisi exercitationem omnis earum qui.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="u-center-text u-margin-top-huge" data-aos="fade">
-                    <a href="#" class="btn-text">Read all stories &rarr;</a>
-                </div>
-            </section>
-
-            <section class="section-book" data-aos="fade-up">
-                <div class="row">
-                    <div class="book">
-                        <div class="book__form">
-                            <form action="#" class="form">
-                                <div class="u-margin-bottom-medium">
-                                    <h2 class="heading-secondary">
-                                        Start booking now
-                                    </h2>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="text" class="form__input" placeholder="Full name" id="name" required>
-                                    <label for="name" class="form__label">Full name</label>
-                                </div>
-
-                                <div class="form__group">
-                                    <input type="email" class="form__input" placeholder="Email address" id="email" required>
-                                    <label for="email" class="form__label">Email address</label>
-                                </div>
-
-                                <div class="form__group u-margin-bottom-medium">
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="small" name="size">
-                                        <label for="small" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Small tour group
-                                        </label>
-                                    </div>
-
-                                    <div class="form__radio-group">
-                                        <input type="radio" class="form__radio-input" id="large" name="size">
-                                        <label for="large" class="form__radio-label">
-                                            <span class="form__radio-button"></span>
-                                            Large tour group
-                                        </label>
-                                    </div>
-                                </div>
-
-                                <div class="form__group">
-                                    <button class="btn btn--green">Next step &rarr;</button>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </section> -->
-        </main>
-
-        <footer id="footer" class="footer" data-aos="fade-up">
-            <div class="footer__logo-box">
-
-                <picture class="footer__logo">
-                    
-                    <img src="img/logo-white.png " alt="Full logo" src="img/logo-green-2x.png">
-                </picture>
-
-
-                
-            </div>
-            <div class="row">
-                <div class="col-1-of-2">
-                    <div class="footer__navigation">
-                        <ul class="footer__list">
-                            <li class="footer__item"><a href="#" class="footer__link">Organization</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Contact us</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Carrers</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
-                            <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-1-of-2">
-                    <p class="footer__copyright">
-                        Built by <a href="https://roopam527.github.io" target="_blank" class="footer__link">Roopam Garg</a> 
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <div class="popup" id="popup">
-            <div class="popup__content">
-                <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
-                </div>
-                <div class="popup__right">
-                    <a href="#section-tours" class="popup__close">&times;</a>
-                    <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
-                    <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
-                    <p class="popup__text">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        Sed sed risus pretium quam. Aliquam sem et tortor consequat id. Volutpat odio facilisis mauris sit
-                        amet massa vitae. Mi bibendum neque egestas congue. Placerat orci nulla pellentesque dignissim enim
-                        sit. Vitae semper quis lectus nulla at volutpat diam ut venenatis. Malesuada pellentesque elit eget
-                        gravida cum sociis natoque penatibus et. Proin fermentum leo vel orci porta non pulvinar neque laoreet.
-                        Gravida neque convallis a cras semper. Molestie at elementum eu facilisis sed odio morbi quis. Faucibus
-                        vitae aliquet nec ullamcorper sit amet risus nullam eget. Nam libero justo laoreet sit. Amet massa
-                        vitae tortor condimentum lacinia quis vel eros donec. Sit amet facilisis magna etiam. Imperdiet sed
-                        euismod nisi porta.
-                    </p>
-                    <a href="#" class="btn btn--green">Book now</a>
-                </div>
-            </div>
+        <div class="blog-slider__item swiper-slide">
+          <div class="blog-slider__img bg--abyantrik" >
+  
+          </div>
+          <div class="blog-slider__content">
+            <span class="blog-slider__code">Coming Soon</span>
+            <div class="blog-slider__title">Techfest</div>
+            <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+              voluptate repellendus magni illo ea animi?</div>
+            <a href="#" class="blog-slider__button">READ MORE</a>
+          </div>
         </div>
 
-        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init();
-  </script>
-        <script src="./js/main.js"></script>
-    </body>
+
+      </div>
+      <div class="blog-slider__pagination"></div>
+  </div>
+  </section>
+  <section id="section-study" class="section-study">
+    <div class="row">
+      <!-- COMPUTER ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--cse">
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">COMPUTER ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for CSE branch </p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ELECTRICAL ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--ee">
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">ELECTRICAL ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for ECE branch.</p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- MECHANICAL ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--me" >
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">MECHANICAL ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for ECE branch.</p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- CHEMICAL ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--ce" >
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">CHEMICAL ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for ECE branch.</p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- ELECTRONICS AND COMMUNICATION ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--ece">
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">ELECTRONICS AND COMMUNICATION ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for ECE branch.</p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- POLYMER ENGINEERING-->
+      <div class="study-card card">
+        <div class="wrapper wrapper--pe">
+          <div class="header">
+
+          </div>
+          <div class="data">
+            <div class="content">
+
+              <h1 class="title margin--sm">POLYMER ENGINEERING</h1>
+              <p class="text">Get syllabus and previous year question papers for ECE branch.</p>
+              <a href="#" class="button ">Read more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="section-team" class="section-team">
+
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Jagmohan Rai</h2>
+        <h4>President</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Piyush Mittal</h2>
+        <h4>Vice President</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Kaushal Kishore</h2>
+        <h4>Secretary</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Pooja</h2>
+        <h4>Joint Secretary</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Pankaj Singh</h2>
+        <h4>Treasurer</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Md. Faizal Alam</h2>
+        <h4>Event Manager</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Yatin Khurana</h2>
+        <h4>Technical Core head</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Roopam Garg</h2>
+        <h4>Web Developer</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Anil Shill</h2>
+        <h4>Graphic designer</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Geetanshu Sharma</h2>
+        <h4>Content Writer</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Md. Shuaib</h2>
+        <h4>Video Editor</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Deepak Sharma</h2>
+        <h4>Computer Technical head</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Mukund Mishra</h2>
+        <h4>Polymer Technical head</h4>
+      </div>
+
+    </div>
+    <div class="window">
+      <div class="overlay" ></div>
+      <div class="box header">
+
+        <img src="./img/degaultpic.png" alt="" />
+
+        <h2>Shubham Pandey</h2>
+        <h4>Computer Technical Head</h4>
+      </div>
+
+    </div>
+    <div class="window">
+        <div class="overlay" ></div>
+        <div class="box header">
+  
+          <img src="./img/degaultpic.png" alt="" />
+  
+          <h2>Vishal Mishra</h2>
+          <h4>Mechanical Technical Head</h4>
+        </div>
+  
+      </div>
+
+  </section>
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/EasePack.min.js"></script>
+<script src="https://www.marcoguglie.it/Codepen/AnimatedHeaderBg/demo-1/js/TweenLite.min.js"></script>
+
+<script src="./js/lines.js"></script>
+
+<script src="./js/swiper.js"></script>
+<script src="./js/script.js"></script>
+<!-- <script src="./dist/bundle.js"></script> -->
 </html>
