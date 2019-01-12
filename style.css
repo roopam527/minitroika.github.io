@@ -164,6 +164,22 @@ ORDER: Base + typography > general layout + grid > page layout > components
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1); } }
 
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.3, 0.3, 0.3);
+    transform: scale3d(0.3, 0.3, 0.3); }
+  50% {
+    opacity: 1; } }
+
 *,
 *::after,
 *::before {
@@ -584,7 +600,8 @@ body {
   border-radius: 25px;
   height: 400px;
   transition: all .3s;
-  font-size: 1.4rem; }
+  font-size: 1.4rem;
+  animation: zoomIn 0.5s; }
   @media screen and (max-width: 992px) {
     .blog-slider {
       max-width: none;
@@ -593,7 +610,7 @@ body {
   @media screen and (max-width: 768px) {
     .blog-slider {
       height: 100%;
-      transform: scale(0.7);
+      transform: perspective(0) scale(0.7);
       height: fit-content;
       margin: 180px auto; } }
   @media screen and (max-height: 500px) and (min-width: 992px) {
@@ -972,13 +989,13 @@ body {
 .section {
   transition: all .5s; }
   .section-header {
-    transform: scale(1);
-    transition: all .1s; }
+    transform: perspective(0) scale(1);
+    transition: all .5s; }
   .section-about {
     text-align: left;
     padding: 2rem  20rem 2rem 5rem;
-    animation: fadeInUp .5s;
-    transform: scale(1);
+    animation: zoomIn 0.5s;
+    transform: perspective(0) scale(1);
     transition: all 1s; }
     @media only screen and (max-width: 56.25em) {
       .section-about {
@@ -993,7 +1010,7 @@ body {
     min-width: 100vw;
     z-index: 10;
     transition: all 1s;
-    transform: scale(1); }
+    transform: perspective(0) scale(1); }
   .section-team {
     position: absolute;
     top: 0;
@@ -1007,7 +1024,7 @@ body {
     padding-left: 20rem;
     display: flex;
     transition: all 1s;
-    transform: scale(1); }
+    transform: perspective(0) scale(1); }
     .section-team .window {
       margin: 0 -2rem; }
     @media only screen and (max-width: 56.25em) {

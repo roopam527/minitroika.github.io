@@ -1,20 +1,24 @@
 .section{
     transition: all .5s;
     &-header{
-        transform: scale(1);
-        transition: all .1s;
+        transform: perspective(0) scale(1);
+        transition: all .5s;
     }
     &-about{
+
         text-align: left;
         padding: 2rem  20rem 2rem 5rem ;
-        animation: fadeInUp .5s;
-        transform: scale(1);
+        animation: zoomIn.5s;
+        transform: perspective(0) scale(1);
         transition: all 1s;
 
         @include respond(tab-port){
             padding: 2rem 5rem 2rem 5rem 
         }
     }
+
+  
+    
     &-study{
 
         width: 100vw;
@@ -26,7 +30,7 @@
         min-width: 100vw;
         z-index: 10;
         transition: all 1s;
-        transform: scale(1)
+        transform: perspective(0) scale(1)
     }
     &-team{
         position: absolute;
@@ -41,7 +45,7 @@
        padding-left: 20rem;
         display: flex;
         transition: all 1s;
-        transform: scale(1);
+        transform: perspective(0) scale(1);
         .window{
             margin: 0 -2rem;
         }

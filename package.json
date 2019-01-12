@@ -6,7 +6,7 @@
   "scripts": {
     "watch:sass": "node-sass sass/main.scss style.css -w",
     "build": "webpack-dev-server",
-    "build:prod":"webpack -p"
+    "build:prod": "webpack -p"
   },
   "author": "",
   "license": "ISC",

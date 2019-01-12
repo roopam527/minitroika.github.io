@@ -7,7 +7,7 @@ checkBox.addEventListener('change',(event)=>{
     
         sections.forEach((element)=>{
             if(checkBox.checked){
-            element.style.transform="scale(0)";
+            element.style.transform="perspective(50000000px)  scale(0)";
             }
             else{
                element.style.transform="";
